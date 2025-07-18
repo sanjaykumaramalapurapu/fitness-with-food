@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abs</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Font Awesome for icons -->
+<style>
+     body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('https://s3.amazonaws.com/thisistoday-webassets/siteMedia/Devotion-Images/2019-10/workout.jpg'); /* Replace 'path/to/your/image.jpg' with your image file path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Ensures the background image stays fixed while scrolling */
+  backdrop-filter: blur(5px); /* Blur effect */
+}
+    .header {
+        background-color: #000; /* Changed header background color to black */
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+    .logo {
+        width: 40px; /* Adjust size as needed */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 10px; /* Space between logo and text */
+    }
+    .header-text {
+        font-size: 18px;
+        text-align: center;
+        flex-grow: 1; /* Center align text */
+    }
+    .corner-text {
+        font-size: 14px;
+        text-align: right;
+        white-space: nowrap; /* Prevent text from wrapping */
+        margin-left: 10px; /* Add space between texts */
+    }
+    .container {
+        display: ; /* Hide all containers by default */
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .form {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap if needed */
+}
+.form-group {
+    flex: 1; /* Equal width for form groups */
+    margin-right: 7px; /* Space between form groups */
+}
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+    form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    label {
+        font-weight: bold;
+    }
+    input[type="number"] {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #001c1c;
+        color: #fff;
+        cursor: pointer;
+    }
+    .rice-image {
+        display: block;
+        margin: 0 auto;
+        width: 200px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+    }
+    .btn-group {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px 0;
+    }
+    .btn {
+        flex: 1;
+        margin: 0 5px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #333;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+        background-color: #555;
+    }
+    .green-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.green-button:hover {
+    background-color: #45a049;
+}
+
+ </style>
+</head>
+<body>
+
+<div class="header">
+    <img src="https://www.rxbodybuilders.com/wp-content/uploads/body-building-supplements.jpg" alt="Logo" class="logo">
+    <img src="https://maxedmuscle.com/wp-content/uploads/2017/12/Strong-And-Handsome-Young-Body-89630354.jpg" alt="Logo" class="logo">
+    <div class="header-text">Abs workout</div>
+    <div class="corner-text">
+        <a href="{{url_for('index')}}" class="green-button">Go to Home</a>
+    </div>
+</div>
+<div class="container" id="Abs">
+    <h1>mountain climber-30seconds</h1>
+    <img src="https://i.pinimg.com/originals/32/a7/d0/32a7d00d6123dd416e459ba67cf1691b.gif" alt="mountain_climber" class="rice-image">
+</div>
+
+<div class="container" id="Abs">
+    <h1>Leg raise x10</h1>
+    <img src="https://www.fitnesscim.com/wp-content/uploads/2023/08/Leg-raise.gif" alt="Leg_raise" class="rice-image">
+</div>
+<div class="container" id="Abs">
+    <h1>crunches-x20</h1>
+    <img src="https://www.icegif.com/wp-content/uploads/2022/07/icegif-467.gif" alt="crunches" class="rice-image">
+</div>
+<div class="container" id="Abs">
+    <h1>v-up 30 seconds</h1>
+    <img src="https://i.pinimg.com/originals/b1/72/e2/b172e2b7128be162f13875ba91b84a17.gif" alt="v-up" class="rice-image">
+</div>
+<div class="container" id="Abs">
+    <h1>cross crunchesx20 Each side</h1>
+    <img src="https://www.top.me/wp-content/uploads/2015/09/Crisscross-Crunch.gif" alt="cross crunches" class="rice-image">
+</div>
+<div class="container" id="Abs">
+    <h1>side bridge-Each side x12</h1>
+    <img src="https://liftmanual.com/wp-content/uploads/2023/04/side-bridge.webp" alt="side bridge" class="rice-image">
+</div>
+<div class="container" id="Abs">
+    <h1>Butt bridge x16</h1>
+    <img src="https://media.giphy.com/media/ptN3YwlD2MKOI/giphy.gif" alt="Butt bridge" class="rice-image">
+</div>
+<div class="container" id="Abs">
+    <h1>Abdominal crunches x15</h1>
+    <img src="https://i.pinimg.com/originals/a4/87/49/a487496bb775fbf575787df765fcf47d.gif" alt="Abdominal crunches" class="rice-image">
+</div>
+<div class="container" id="Abs">
+    <h1>side plank-Both sides 30 sec</h1>
+    <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/workouts/2016/03/sideplank-1456956829.gif" alt="side plan" class="rice-image">
+</div>
+<div class="container" id="Abs">
+    <h1>plank 1min</h1>
+    <img src="https://i0.wp.com/catchspaces.sfo2.digitaloceanspaces.com/nepalbuzz/2018/03/Doing-Planks.jpg?fit=940%2C627&ssl=1" alt="plank" class="rice-image">
+</div>
+<div class="container" id="Abs">
+    <h1>Cobra stretch-30 sec</h1>
+    <img src="https://mybrain2spine.com/wp-content/uploads/2020/10/Cobra-Stretch-1024x683.jpg" alt="Cobra_stretch" class="rice-image">
+</div>
+<div class="container" id="Abs">
+    <h1>Rest-5min</h1>
+    <img src="https://betterme.world/articles/wp-content/uploads/2021/06/shutterstock_1145563982.jpg" alt="Rest" class="rice-image">
+</div>
+</body>
+</html>
+

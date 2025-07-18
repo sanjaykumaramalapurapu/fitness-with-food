@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>legs</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Font Awesome for icons -->
+<style>
+     body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('https://s3.amazonaws.com/thisistoday-webassets/siteMedia/Devotion-Images/2019-10/workout.jpg'); /* Replace 'path/to/your/image.jpg' with your image file path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Ensures the background image stays fixed while scrolling */
+  backdrop-filter: blur(5px); /* Blur effect */
+}
+    .header {
+        background-color: #000; /* Changed header background color to black */
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+    .logo {
+        width: 40px; /* Adjust size as needed */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 10px; /* Space between logo and text */
+    }
+    .header-text {
+        font-size: 18px;
+        text-align: center;
+        flex-grow: 1; /* Center align text */
+    }
+    .corner-text {
+        font-size: 14px;
+        text-align: right;
+        white-space: nowrap; /* Prevent text from wrapping */
+        margin-left: 10px; /* Add space between texts */
+    }
+    .container {
+        display: ; /* Hide all containers by default */
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .form {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap if needed */
+}
+.form-group {
+    flex: 1; /* Equal width for form groups */
+    margin-right: 7px; /* Space between form groups */
+}
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+    form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    label {
+        font-weight: bold;
+    }
+    input[type="number"] {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #001c1c;
+        color: #fff;
+        cursor: pointer;
+    }
+    .rice-image {
+        display: block;
+        margin: 0 auto;
+        width: 200px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+    }
+    .btn-group {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px 0;
+    }
+    .btn {
+        flex: 1;
+        margin: 0 5px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #333;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+        background-color: #555;
+    }
+    .green-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.green-button:hover {
+    background-color: #45a049;
+}
+
+ </style>
+</head>
+<body>
+
+<div class="header">
+    <img src="https://www.rxbodybuilders.com/wp-content/uploads/body-building-supplements.jpg" alt="Logo" class="logo">
+    <img src="https://maxedmuscle.com/wp-content/uploads/2017/12/Strong-And-Handsome-Young-Body-89630354.jpg" alt="Logo" class="logo">
+    <div class="header-text">Legs workouts </div>
+    <div class="corner-text">
+        <a href="{{url_for('index')}}" class="green-button">Go to Home</a>
+    </div>
+</div>
+<div class="container" id="Legs">
+    <h1>side-Hop</h1>
+    <img src="http://engagerprojects.com.au/wp-content/uploads/2016/05/20_M_WIP02.gif" alt="side-Hop" class="rice-image">
+</div>
+<div class="container" id="Legs">
+    <h1>squats x15</h1>
+    <img src="https://i.pinimg.com/originals/63/be/5f/63be5f70cad75c78074a6201a854030c.gif" alt="squats" class="rice-image">
+</div>
+<div class="container" id="Legs">
+    <h1>side lying leg lift-Both legs x12</h1>
+    <img src="https://i.pinimg.com/originals/4f/83/5b/4f835b39edf955d880943391e0f9bbd7.gif" alt="side lying leg lift" class="rice-image">
+</div>
+<div class="container" id="Legs">
+    <h1>Backward lunges-Bothlegs x14</h1>
+    <img src="https://media1.popsugar-assets.com/files/thumbor/jX-23DSxesLV4nB5JbVT20pA8-Q/fit-in/728xorig/filters:format_auto-!!-:strip_icc-!!-/2018/03/22/965/n/1922729/b6c4f29ce9014630_ReverseLunge1/i/Reverse-Lunge.gif" alt="Backward lunges" class="rice-image">
+</div>
+<div class="container" id="Legs">
+    <h1>Donkey kick-Bothlegs x16</h1>
+    <img src="https://post.healthline.com/wp-content/uploads/2020/09/400x400_Donkey_Kick_Exercises_Donkey_Kick.gif" alt="Donkey kick" class="rice-image">
+</div>
+<div class="container" id="Legs">
+    <h1>Quad stretch-Both legs x20</h1>
+    <img src="https://cdn.greatlifepublishing.net/wp-content/uploads/sites/6/2017/11/27173133/quadstretch.gif" alt="Quad stretch-Both legs" class="rice-image">
+</div>
+<div class="container" id="Legs">
+    <h1>Calf Raises x20</h1>
+    <img src="https://flabfix.com/wp-content/uploads/2019/06/Calf-Raises.gif" alt="Calf Raises" class="rice-image">
+</div>
+<div class="container" id="Legs">
+    <h1>sumo squat calf raises x20</h1>
+    <img src="https://i0.wp.com/post.greatist.com/wp-content/uploads/sites/2/2019/05/SumoSquat-Final.gif?w=1155&h=812" alt="sumo squat calf raises" class="rice-image">
+</div>
+<div class="container" id="Legs">
+    <h1>Fire Hydrant-Both legs x20</h1>
+    <img src="https://www.vissco.com/wp-content/uploads/animation/sub/q-ped-fire-hydrant.gif" alt="Fire Hydrant-Both legs" class="rice-image">
+</div>
+<div class="container" id="Legs">
+    <h1>Rest-5min</h1>
+    <img src="https://betterme.world/articles/wp-content/uploads/2021/06/shutterstock_1145563982.jpg" alt="Rest" class="rice-image">
+</div>
+</body>
+</html>
+
+
+

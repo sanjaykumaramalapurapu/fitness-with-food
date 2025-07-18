@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fitness with Food</title>
+<style>
+  body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('https://i.pinimg.com/originals/3e/d5/33/3ed533e21bc6475e7cc2a13a986c05d1.jpg'); /* Replace 'path/to/your/image.jpg' with your image file path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Ensures the background image stays fixed while scrolling */
+  backdrop-filter: blur(5px); /* Blur effect */
+}
+
+  header {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo img {
+    width: 50px;
+    height: auto;
+    display: block;
+  }
+  .logo-right img {
+    width: 50px;
+    height: auto;
+    display: block;
+    margin-left: 10px;
+  }
+  .header-text {
+    display: inline-block;
+    max-width: 60%;
+    margin: 0 auto;
+  }
+  .header-text h1 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+  .button-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  .button-container .button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #4CAF50; /* Green button color */
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Smooth transition for button color */
+  }
+  .button-container .button:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+  .image-pair {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  .image-container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px;
+    position: relative;
+    text-align: center; /* Center align text within image container */
+  }
+  .image-container img {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  .image-container .button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 8px 16px;
+    background-color: #4CAF50; /* Green button color */
+    color: white;
+    text-decoration: none;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Smooth transition for button color */
+  }
+  .image-container:hover .button {
+    background-color: #45a049; /* Darker green on hover */
+  }.green-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.green-button:hover {
+    background-color: #45a049;
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">
+    <img src="https://media.womensweekly.com.sg/source/2019/07/things-to-eat-for-brekfast-to-lose-weight_unsplash.jpg" alt="Fitness with Food Logo">
+  </div>
+  <div class="logo-right">
+    <img src="https://www.eatingwell.com/thmb/bL5vsWTVmQjteXAmsAQw10c1RnE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/mediterranean-turkey-meatball-lunch-box-c2c79e6728bc409fa2f547de33c57a6c.jpg" alt="Second Logo">
+  </div>
+  <div class="header-text">
+    <h1>Welcome to calories calculator</h1>
+  </div>
+   <div class="corner-text">
+        <a href="{{url_for('index')}}" class="green-button">Go to Home</a>
+    </div>
+</header>
+<div class="image-pair">
+  <div class="image-container">
+    <img src="https://www.pristyncare.com/blog/wp-content/uploads/2019/10/shutterstock_1153818823.jpg" alt="Diet Calculators Image">
+    <a href="{{ url_for('breakfast')}}" class="button">Breakfast</a></div>
+</div>
+<div class="image-pair">
+  <div class="image-container">
+    <img src="http://getinfolist.com/wp-content/uploads/2014/04/indian-food-salinda-41c0.jpg" alt="lunch image">
+    <a href="{{ url_for('lunch')}}" class="button">lunch</a>
+  </div>
+</div>
+<div class="image-pair">
+  <div class="image-container">
+    <img src="https://d2td6mzj4f4e1e.cloudfront.net/wp-content/uploads/sites/9/2019/02/unhealthy-food.jpg" alt="snacks Image">
+    <a href="{{ url_for('snacks')}}" class="button">Snacks and Drinks</a>
+  </div>
+</div>
+</body>
+</html>
+
+

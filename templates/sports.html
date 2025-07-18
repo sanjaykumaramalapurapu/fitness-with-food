@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>sports</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Font Awesome for icons -->
+<style>
+     body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('https://www.northern-times.co.uk/_media/img/1EF1CM68YBICE5RD8HP5.jpg'); /* Replace 'path/to/your/image.jpg' with your image file path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Ensures the background image stays fixed while scrolling */
+  backdrop-filter: blur(5px); /* Blur effect */
+}
+    .header {
+        background-color: #000; /* Changed header background color to black */
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+    .logo {
+        width: 40px; /* Adjust size as needed */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 10px; /* Space between logo and text */
+    }
+    .header-text {
+        font-size: 18px;
+        text-align: center;
+        flex-grow: 1; /* Center align text */
+    }
+    .corner-text {
+        font-size: 14px;
+        text-align: right;
+        white-space: nowrap; /* Prevent text from wrapping */
+        margin-left: 10px; /* Add space between texts */
+    }
+    .container {
+        display: ; /* Hide all containers by default */
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .form {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap if needed */
+}
+.form-group {
+    flex: 1; /* Equal width for form groups */
+    margin-right: 7px; /* Space between form groups */
+}
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+    form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    label {
+        font-weight: bold;
+    }
+    input[type="number"] {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #001c1c;
+        color: #fff;
+        cursor: pointer;
+    }
+    .rice-image {
+        display: block;
+        margin: 0 auto;
+        width: 200px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+    }
+    .btn-group {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px 0;
+    }
+    .btn {
+        flex: 1;
+        margin: 0 5px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #333;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+        background-color: #555;
+    }
+    .green-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.green-button:hover {
+    background-color: #45a049;
+}
+
+ </style>
+</head>
+<body>
+
+<div class="header">
+    <img src="https://www.badmintonmag.com/wp-content/uploads/2018/07/badminton-1428047_1920.jpg" alt="Logo" class="logo">
+    <img src="http://www.yellowjersey.co.uk/wp-content/uploads/2016/08/Cadence-team-ride-41.jpg" alt="Logo" class="logo">
+    <div class="header-text">🏸SPORTS🚴🏻</div>
+    <div class="corner-text">
+        <a href="{{url_for('index')}}" class="green-button">Go to Home</a>
+    </div>
+</div>
+<div class="container" id="sports">
+    <h1>Badmintion</h1>
+    <img src="https://tiebreakertimes.com.ph/wp-content/uploads/2020/02/2020-SMART-Badminton-Asia-Manila-Team-Championships-Indonesia-def-Philippines-JONATAN-CHRISTIE-3.jpg" alt="Badmintion" class="rice-image">
+    <form action="{{ url_for('sports') }}" method="post" class="form">
+        <div class="form-group">
+            <label for="weight_badmintion">weight(kgs)</label>
+            <input type="number" id="weight_badmintion" name="weight_badmintion" value="{{ weight_badmintion }}">
+        </div>
+        <div class="form-group">
+            <label for="minutes_badmintion">Number of Minutes</label>
+            <input type="number" id="minutes_badmintion" name="minutes_badmintion" value="{{ minutes_badmintion }}" >
+        </div>
+        <div class="form-group">
+            <label for="caloriesConsumed_badmintion">Number of Calories:</label>
+            <input type="number" id="caloriesConsumed_badmintion" name="caloriesConsumed_badmintion" value="{{ caloriesConsumed_badmintion }}" readonly>
+        </div>
+        <input type="submit" value="Calculate Calories">
+    </form>
+</div>
+<div class="container" id="sports">
+    <h1>Running</h1>
+    <img src="https://i.pinimg.com/originals/03/00/e8/0300e8ade987f4a378f644ada9ed431d.jpg" alt="Badmintion" class="rice-image">
+    <form action="{{ url_for('sports') }}" method="post" class="form">
+        <div class="form-group">
+            <label for="weight_run">weight</label>
+            <input type="number" id="weight_run" name="weight_run" value="{{ weight_run }}">
+        </div>
+        <div class="form-group">
+            <label for="speed">speed(6-22km/h)</label>
+            <input type="number" id="speed" name="speed" value="{{ speed }}">
+        </div>
+        <div class="form-group">
+            <label for="minutes_run">minutes</label>
+            <input type="number" id="minutes_run" name="minutes_run" value="{{ minutes_run }}" >
+        </div>
+        <div class="form-group">
+            <label for="caloriesConsumed_run">Calories:</label>
+            <input type="number" id="caloriesConsumed_run" name="caloriesConsumed_run" value="{{ caloriesConsumed_run }}" readonly>
+        </div>
+        <input type="submit" value="Calculate Calories">
+    </form>
+</div>
+<div class="container" id="sports">
+    <h1>swimming</h1>
+    <img src="http://upload.wikimedia.org/wikipedia/commons/2/29/33_ACPS_Atlanta_1996_Swimming_Jeff_Hardy.jpg" alt="Badmintion" class="rice-image">
+    <form action="{{ url_for('sports') }}" method="post" class="form">
+        <div class="form-group">
+            <label for="weight_swim">weight</label>
+            <input type="number" id="weight_swim" name="weight_swim" value="{{ weight_swim }}">
+        </div>
+        <div class="form-group">
+            <label for="minutes_swim">minutes</label>
+            <input type="number" id="minutes_swim" name="minutes_swim" value="{{ minutes_swim }}" >
+        </div>
+        <div class="form-group">
+            <label for="caloriesConsumed_swim">Calories:</label>
+            <input type="number" id="caloriesConsumed_swim" name="caloriesConsumed_swim" value="{{ caloriesConsumed_swim }}" readonly>
+        </div>
+        <input type="submit" value="Calculate Calories">
+    </form>
+</div>
+<div class="container" id="sports">
+    <h1>cycling</h1>
+    <img src="https://cdn.mos.cms.futurecdn.net/4qrW9mHjeDWK5hSFuTMkk3.jpg" alt="cycling" class="rice-image">
+    <form action="{{ url_for('sports') }}" method="post" class="form">
+        <div class="form-group">
+            <label for="weight_cycle">weight</label>
+            <input type="number" id="weight_cycle" name="weight_cycle" value="{{ weight_cycle }}">
+        </div>
+        <div class="form-group">
+            <label for="minutes_cycle">minutes</label>
+            <input type="number" id="minutes_cycle" name="minutes_cycle" value="{{ minutes_cycle }}" >
+        </div>
+        <div class="form-group">
+            <label for="caloriesConsumed_cycle">Calories:</label>
+            <input type="number" id="caloriesConsumed_cycle" name="caloriesConsumed_cycle" value="{{ caloriesConsumed_cycle }}" readonly>
+        </div>
+        <input type="submit" value="Calculate Calories">
+    </form>
+</div>
+<div class="container" id="sports">
+    <h1>Boxing</h1>
+    <img src="https://boxingready.com/wp-content/uploads/2019/06/how-to-punch-a-punching-bag.jpg" alt="cycling" class="rice-image">
+    <form action="{{ url_for('sports') }}" method="post" class="form">
+        <div class="form-group">
+            <label for="weight_boxing">weight</label>
+            <input type="number" id="weight_boxing" name="weight_boxing" value="{{ weight_boxing }}">
+        </div>
+        <div class="form-group">
+            <label for="minutes_boxing">minutes</label>
+            <input type="number" id="minutes_boxing" name="minutes_boxing" value="{{ minutes_boxing }}" >
+        </div>
+        <div class="form-group">
+            <label for="caloriesConsumed_boxing">Calories:</label>
+            <input type="number" id="caloriesConsumed_boxing" name="caloriesConsumed_boxing" value="{{ caloriesConsumed_boxing }}" readonly>
+        </div>
+        <input type="submit" value="Calculate Calories">
+    </form>
+</div>
+</body>
+</html>
+

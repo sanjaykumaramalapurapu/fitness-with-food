@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Breakfast</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Font Awesome for icons -->
+<style>
+     body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('https://static01.nyt.com/images/2023/04/23/multimedia/23WELL-HEALTHY-BREAKFAST9-lgwc/23WELL-HEALTHY-BREAKFAST9-lgwc-videoSixteenByNine3000.jpg'); /* Replace 'path/to/your/image.jpg' with your image file path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Ensures the background image stays fixed while scrolling */
+  backdrop-filter: blur(5px); /* Blur effect */
+}
+    .header {
+        background-color: #000; /* Changed header background color to black */
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+    .logo {
+        width: 40px; /* Adjust size as needed */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 10px; /* Space between logo and text */
+    }
+    .header-text {
+        font-size: 18px;
+        text-align: center;
+        flex-grow: 1; /* Center align text */
+    }
+    .corner-text {
+        font-size: 14px;
+        text-align: right;
+        white-space: nowrap; /* Prevent text from wrapping */
+        margin-left: 10px; /* Add space between texts */
+    }
+    .container {
+        display: ; /* Hide all containers by default */
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: #abebc6;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .form {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap if needed */
+}
+.form-group {
+    flex: 1; /* Equal width for form groups */
+    margin-right: 7px; /* Space between form groups */
+}
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+    form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    label {
+        font-weight: bold;
+    }
+    input[type="number"] {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #001c1c;
+        color: #fff;
+        cursor: pointer;
+    }
+    .rice-image {
+        display: block;
+        margin: 0 auto;
+        width: 200px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+    }
+    .btn-group {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px 0;
+    }
+    .btn {
+        flex: 1;
+        margin: 0 5px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #333;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+        background-color: #555;
+    }
+    .green-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.green-button:hover {
+    background-color: #45a049;
+}
+
+ </style>
+</head>
+<body>
+
+<div class="header">
+    <img src="https://www.womensalphabet.com/wp-content/uploads/2020/04/balanced-diet.jpg" alt="Logo" class="logo">
+    <img src="https://www.drweil.com/wp-content/uploads/2019/02/Raw-Foods-Diet-2-470909250.jpg" alt="Logo" class="logo">
+    <div class="header-text">🍴Break Fast🍽️</div>
+    <div class="corner-text">
+        <a href="{{url_for('index')}}" class="green-button">Go to Home</a>
+        <a href="{{url_for('diet_calculators')}}" class="green-button">Go to Diet Calculator</a>
+    </div>
+</div>
+<div class="container" id="breakfast">
+    <h1>Egg whites</h1>
+    <img src="https://images.eatthismuch.com/img/1830459_MSF415_1b39160b-fcb3-4321-a023-3ced152aef2d.jpg" alt="Egg whites" class="rice-image">
+    <form action="{{ url_for('breakfast') }}" method="post" class="form">
+        <div class="form-group">
+            <label for="Egg_whites">Number of Egg whites:</label>
+            <input type="number" id="Egg_whites" name="Egg_whites" value="{{ Egg_whites }}">
+        </div>
+        <div class="form-group">
+            <label for="egg_protein">Egg protien:</label>
+            <input type="number" id="egg_protein" name="egg_protein" value="{{ egg_protein }}" readonly>
+        </div>
+        <div class="form-group">
+            <label for="caloriesConsumed_egg">Number of Calories:</label>
+            <input type="number" id="caloriesConsumed_egg" name="caloriesConsumed_egg" value="{{ caloriesConsumed_egg }}" readonly>
+        </div>
+        <input type="submit" value="Calculate Calories">
+    </form>
+    <h1>Sprouts</h1>
+    <img src="https://www.funfoodfrolic.com/wp-content/uploads/2020/09/Sprout-Salad-Thumbnail-1024x1024.jpg" alt="Sprouts" class="rice-image">
+    <form action="{{ url_for('breakfast') }}" method="post" class="form">
+        <div class="form-group">
+            <label for="sprouts_grams">sprouts grams:</label>
+            <input type="number" id="sprouts_grams" name="sprouts_grams" value="{{ sprouts_grams }}">
+        </div>
+        <div class="form-group">
+            <label for="caloriesConsumed_Sprouts">Number of Calories:</label>
+            <input type="number" id="caloriesConsumed_Sprouts" name="caloriesConsumed_Sprouts" value="{{ caloriesConsumed_Sprouts }}" readonly>
+        </div>
+        <input type="submit" value="Calculate Calories">
+    </form>
+    <h1>oat meal</h1>
+    <img src="https://images.everydayhealth.com/images/health-benefits-of-oatmeal-1440x810.jpg?sfvrsn=9f201ef_4" alt="Poori" class="rice-image">
+    <form action="{{ url_for('breakfast') }}" method="post" class="form">
+        <div class="form-group">
+            <label for="oats_Grams">oats_Grams:</label>
+            <input type="number" id="oats_Grams" name="oats_Grams" value="{{ oats_Grams }}">
+        </div>
+        <div class="form-group">
+            <label for="caloriesConsumed_oats">Number of Calories:</label>
+            <input type="number" id="caloriesConsumed_oats" name="caloriesConsumed_oats" value="{{ caloriesConsumed_oats }}" readonly>
+        </div>
+        <input type="submit" value="Calculate Calories">
+    </form>
+    <h1>Bread Butter Jam</h1>
+    <img src="https://image.freepik.com/free-photo/delicious-toast-bread-served-with-butter-spread-with-strawberry-jam-breakfast_54413-262.jpg" alt="bread" class="rice-image">
+    <form action="{{ url_for('breakfast') }}" method="post" class="form">
+        <div class="form-group">
+            <label for="bread_jam">Number of Breads:</label>
+            <input type="number" id="bread_jam" name="bread_jam" value="{{bread_jam }}">
+        </div>
+        <div class="form-group">
+            <label for="caloriesConsumed_bread">Number of Calories:</label>
+            <input type="number" id="caloriesConsumed_bread" name="caloriesConsumed_bread" value="{{ caloriesConsumed_bread }}" readonly>
+        </div>
+        <input type="submit" value="Calculate Calories">
+    </form>
+    <h1>Idly</h1>
+    <img src="https://static.toiimg.com/photo/68631114.cms" alt="idly" class="rice-image">
+    <form action="{{ url_for('breakfast') }}" method="post" class="form">
+        <div class="form-group">
+            <label for="Idly">Number of Idlies:</label>
+            <input type="number" id="idly" name="idly" value="{{ idly }}">
+        </div>
+        <div>
+            <label for="caloriesConsumed_idly">Number of Calories:</label>
+            <input type="number" id="caloriesConsumed_idly" name="caloriesConsumed_idly" value="{{ caloriesConsumed_idly }}" readonly>
+        </div>
+        <input type="submit" value="Calculate Calories">
+    </form>
+    <h1>Onion Dosa(150g)</h1>
+    <img src="https://jfwonline.com/wp-content/uploads/2016/11/Plain-dosa-JFW-Article.jpg" alt="Dosa" class="rice-image">
+    <form action="{{ url_for('breakfast') }}" method="post" class="form">
+        <div class="form-group">
+            <label for="Dosa">Number of Dosa:</label>
+            <input type="number" id="Dosa" name="Dosa" value="{{ Dosa }}">
+        </div>
+        <div class="form-group">
+            <label for="caloriesConsumed_dosa">Number of Calories:</label>
+            <input type="number" id="caloriesConsumed_dosa" name="caloriesConsumed_dosa" value="{{ caloriesConsumed_dosa }}" readonly>
+        </div>
+        <input type="submit" value="Calculate Calories">
+    </form>
+    <h1>Poori(40g)</h1>
+    <img src="https://www.awesomecuisine.com/wp-content/uploads/2020/03/poori-masala-kizhangu-585x390.jpg" alt="Poori" class="rice-image">
+    <form action="{{ url_for('breakfast') }}" method="post" class="form">
+        <div class="form-group">
+            <label for="poori">Number of Poories:</label>
+            <input type="number" id="Poori" name="Poori" value="{{ Poori }}">
+        </div>
+        <div class="form-group">
+            <label for="caloriesConsumed_Poori">Number of Calories:</label>
+            <input type="number" id="caloriesConsumed_Poori" name="caloriesConsumed_Poori" value="{{ caloriesConsumed_Poori }}" readonly>
+        </div>
+        <input type="submit" value="Calculate Calories">
+    </form>
+    <h1>Vada(70g)</h1>
+    <img src="https://femina.wwmindia.com/content/2016/Aug/medu_vada_1471522945.jpg" alt="Vada" class="rice-image">
+    <form action="{{ url_for('breakfast') }}" method="post" class="form">
+        <div class="form-group">
+            <label for="vada">Number of Vada:</label>
+            <input type="number" id="Vada" name="Vada" value="{{ Vada }}">
+        </div>
+        <div class="form-group">
+            <label for="caloriesConsumed_Vada">Number of Calories:</label>
+            <input type="number" id="caloriesConsumed_Vada" name="caloriesConsumed_Vada" value="{{ caloriesConsumed_Vada }}" readonly>
+        </div>
+        <input type="submit" value="Calculate Calories">
+    </form>
+    <h1>Mysore Bonda(30g)</h1>
+    <img src="https://images.pexels.com/photos/2990257/pexels-photo-2990257.jpeg?cs=srgb&dl=pexels-sreenath-2990257.jpg&fm=jpg" alt="Mysore Bonda" class="rice-image">
+    <form action="{{ url_for('breakfast') }}" method="post" class="form">
+        <div class="form-group">
+            <label for="Mysore_Bonda">Number of Mysore Bonda:</label>
+            <input type="number" id="Mysore_Bonda" name="Mysore_Bonda" value="{{ Mysore_Bonda }}">
+        </div>
+        <div class="form-group">
+            <label for="caloriesConsumed_Mysore_Bonda">Number of Calories:</label>
+            <input type="number" id="caloriesConsumed_Mysore_Bonda" name="caloriesConsumed_Mysore_Bonda" value="{{ caloriesConsumed_Mysore_Bonda}}" readonly>
+        </div>
+        <input type="submit" value="Calculate Calories">
+    </form>
+</div>
+</body>
+</html>
+

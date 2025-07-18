@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>snacks</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Font Awesome for icons -->
+<style>
+     body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('https://www.healthzap.co/wp-content/uploads/2018/08/1801wUnhealthySnacks.jpg'); /* Replace 'path/to/your/image.jpg' with your image file path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Ensures the background image stays fixed while scrolling */
+  backdrop-filter: blur(5px); /* Blur effect */
+    }
+    .header {
+        background-color: #000; /* Changed header background color to black */
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+    .logo {
+        width: 40px; /* Adjust size as needed */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 10px; /* Space between logo and text */
+    }
+    .header-text {
+        font-size: 18px;
+        text-align: center;
+        flex-grow: 1; /* Center align text */
+    }
+    .corner-text {
+        font-size: 14px;
+        text-align: right;
+        white-space: nowrap; /* Prevent text from wrapping */
+        margin-left: 10px; /* Add space between texts */
+    }
+    .container {
+        display: ; /* Hide all containers by default */
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: #f39c12;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .form {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap if needed */
+}
+.form-group {
+    flex: 1; /* Equal width for form groups */
+    margin-right: 7px; /* Space between form groups */
+}
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+    form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    label {
+        font-weight: bold;
+    }
+    input[type="number"] {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #001c1c;
+        color: #fff;
+        cursor: pointer;
+    }
+    .rice-image {
+        display: block;
+        margin: 0 auto;
+        width: 200px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+    }
+    .btn-group {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px 0;
+    }
+    .btn {
+        flex: 1;
+        margin: 0 5px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #333;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+        background-color: #555;
+    }
+    .green-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.green-button:hover {
+    background-color: #45a049;
+}
+ </style>
+</head>
+<body>
+
+<div class="header">
+    <img src="https://www.womensalphabet.com/wp-content/uploads/2020/04/balanced-diet.jpg" alt="Logo" class="logo">
+    <img src="https://www.drweil.com/wp-content/uploads/2019/02/Raw-Foods-Diet-2-470909250.jpg" alt="Logo" class="logo">
+    <div class="header-text">🍴snacks🍽️</div>
+     <div class="corner-text">
+        <a href="{{url_for('index')}}" class="green-button">Go to Home</a>
+        <a href="{{url_for('diet_calculators')}}" class="green-button">Go to Diet Calculator</a>
+    </div>
+</div>
+<div class="container" id="snacks and Drinks">
+    <h1>samosa</h1>
+    <img src="http://www.zedamagazine.com/wp-content/uploads/2018/06/Indian-Food-Samosa-Dish-HD-Wallpapers.jpg" alt="samosa" class="rice-image">
+    <form action="{{ url_for('snacks') }}" method="post" class="form">
+        <div class="form-group">
+            <label for="samosa">samosas:</label>
+            <input type="number" id="samosa" name="samosa" value="{{ samosa }}">
+        </div>
+        <div>
+            <label for="caloriesConsumed_samosa">Number of Calories:</label>
+            <input type="number" id="caloriesConsumed_samosa" name="caloriesConsumed_samosa" value="{{ caloriesConsumed_samosa }}" readonly>
+        </div>
+        <input type="submit" value="Calculate Calories">
+    </form>
+    <h1>Noodles</h1>
+    <img src="http://www.pngall.com/wp-content/uploads/5/Chinese-Noodles-PNG-Download-Image.png" alt="Noodles" class="rice-image">
+    <form action="{{ url_for('snacks') }}" method="post" class="form">
+        <div class="form-group">
+            <label for="Noodles_grams">Noodles Grams:</label>
+            <input type="number" id="Noodles_grams" name="Noodles_grams" value="{{ Noodles_grams }}">
+        </div>
+        <div>
+            <label for="caloriesConsumed_Noodles">Number of Calories:</label>
+            <input type="number" id="caloriesConsumed_Noodles" name="caloriesConsumed_Noodles" value="{{ caloriesConsumed_Noodles }}" readonly>
+        </div>
+        <input type="submit" value="Calculate Calories">
+    </form>
+    <h1>chaat</h1>
+    <img src="http://www.archanaskitchen.com/images/archanaskitchen/1-Author/sibyl_sunitha/Delhi_Style_Matar_Chaat_Matra_Recipe_Spicy__Tangy_Dry_Green_Peas_Curry_Curry_Recipe.jpg" alt="chaat" class="rice-image">
+    <form action="{{ url_for('snacks') }}" method="post" class="form">
+        <div class="form-group">
+            <label for="chat_grams">Chat Grams:</label>
+            <input type="number" id="chat_grams" name="chat_grams" value="{{ chat_grams }}">
+        </div>
+        <div>
+            <label for="caloriesConsumed_chat">Number of Calories:</label>
+            <input type="number" id="caloriesConsumed_chat" name="caloriesConsumed_chat" value="{{ caloriesConsumed_chat }}" readonly>
+        </div>
+        <input type="submit" value="Calculate Calories">
+    </form>
+    <h1>Mirchi bajji</h1>
+    <img src="https://i.pinimg.com/originals/29/aa/98/29aa98e2f7ce65e03fe27823c0ba2489.jpg" alt="mirchi bajji" class="rice-image">
+    <form action="{{ url_for('snacks') }}" method="post" class="form">
+        <div class="form-group">
+            <label for="mirchi_bajji">Number of bajjies:</label>
+            <input type="number" id="mirchi_bajji" name="mirchi_bajji" value="{{ mirchi_bajji }}">
+        </div>
+        <div>
+            <label for="caloriesConsumed_mirchi">Number of Calories:</label>
+            <input type="number" id="caloriesConsumed_mirchi" name="caloriesConsumed_mirchi" value="{{ caloriesConsumed_mirchi }}" readonly>
+        </div>
+        <input type="submit" value="Calculate Calories">
+    </form>
+    <h1>pani puri</h1>
+    <img src="https://i2.wp.com/bharatinternational.com.au/wp-content/uploads/2020/05/BINT-Pani-Puri.jpg?fit=1225%2C937&ssl=1" alt="pani puri" class="rice-image">
+    <form action="{{ url_for('snacks') }}" method="post" class="form">
+        <div class="form-group">
+            <label for="pani_puri">Number of puries:</label>
+            <input type="number" id="pani_puri" name="pani_puri" value="{{ pani_puri }}">
+        </div>
+        <div>
+            <label for="caloriesConsumed_pani_puri">Number of Calories:</label>
+            <input type="number" id="caloriesConsumed_pani_puri" name="caloriesConsumed_pani_puri" value="{{ caloriesConsumed_pani_puri }}" readonly>
+        </div>
+        <input type="submit" value="Calculate Calories">
+    </form>
+    <h1>sandwhich</h1>
+    <img src="https://media1.s-nbcnews.com/i/newscms/2017_15/1206905/homemade-grilled-cheese-sandwich-today-170411-tease_8025e9554cec4f29903612d1f6ea752d.jpg" alt="sandwhich" class="rice-image">
+    <form action="{{ url_for('snacks') }}" method="post" class="form">
+        <div class="form-group">
+            <label for="sandwhich">Number of sandwhich:</label>
+            <input type="number" id="sandwhich" name="sandwhich" value="{{ sandwhich }}">
+        </div>
+        <div>
+            <label for="caloriesConsumed_sandwhich">Number of Calories:</label>
+            <input type="number" id="caloriesConsumed_sandwhich" name="caloriesConsumed_sandwhich" value="{{ caloriesConsumed_sandwhich }}" readonly>
+        </div>
+        <input type="submit" value="Calculate Calories">
+    </form>
+    <h1>Puffs</h1>
+    <img src="https://i.pinimg.com/originals/af/03/8c/af038c74eedf9aef8476f5f284417231.jpg" alt="puffs" class="rice-image">
+    <form action="{{ url_for('snacks') }}" method="post" class="form">
+        <div class="form-group">
+            <label for="puffs">Number of puffs:</label>
+            <input type="number" id="puffs" name="puffs" value="{{ puffs }}">
+        </div>
+        <div>
+            <label for="caloriesConsumed_puffs">Number of Calories:</label>
+            <input type="number" id="caloriesConsumed_puffs" name="caloriesConsumed_puffs" value="{{ caloriesConsumed_puffs }}" readonly>
+        </div>
+        <input type="submit" value="Calculate Calories">
+    </form>
+    <h1>Coffee with milk and sugar</h1>
+    <img src="https://coffeeaffection.com/wp-content/uploads/2021/06/South-Indian-Coffee_shutterstock_jayk67-1.jpg" alt="Coffee" class="rice-image">
+    <form action="{{ url_for('snacks') }}" method="post" class="form">
+        <div class="form-group">
+            <label for="coffee">Coffee cups:</label>
+            <input type="number" id="coffee" name="coffee" value="{{ coffee }}">
+        </div>
+        <div>
+            <label for="caloriesConsumed_coffee">Number of Calories:</label>
+            <input type="number" id="caloriesConsumed_coffee" name="caloriesConsumed_coffee" value="{{ caloriesConsumed_coffee }}" readonly>
+        </div>
+        <input type="submit" value="Calculate Calories">
+    </form>
+    <h1>Tea with Milk And Sugar</h1>
+    <img src="https://elevenmyanmar.com/sites/news-eleven.com/files/news-images/indiatea.jpg" alt="Tea" class="rice-image">
+    <form action="{{ url_for('snacks') }}" method="post" class="form">
+        <div class="form-group">
+            <label for="Tea">Tea cups:</label>
+            <input type="number" id="Tea" name="Tea" value="{{ Tea }}">
+        </div>
+        <div>
+            <label for="caloriesConsumed_Tea">Number of Calories:</label>
+            <input type="number" id="caloriesConsumed_Tea" name="caloriesConsumed_Tea" value="{{ caloriesConsumed_Tea }}" readonly>
+        </div>
+        <input type="submit" value="Calculate Calories">
+    </form>
+    <h1>Milk Shakes</h1>
+    <img src="https://savoredsips.com/wp-content/uploads/2021/06/oreo-milkshake-featured.jpg" alt="Milk Shakes" class="rice-image">
+    <form action="{{ url_for('snacks') }}" method="post" class="form">
+        <div class="form-group">
+            <label for="milk">Number of shakes:</label>
+            <input type="number" id="milk" name="milk" value="{{ milk }}">
+        </div>
+        <div>
+            <label for="caloriesConsumed_milk">Number of Calories:</label>
+            <input type="number" id="caloriesConsumed_milk" name="caloriesConsumed_milk" value="{{ caloriesConsumed_milk }}" readonly>
+        </div>
+        <input type="submit" value="Calculate Calories">
+    </form>
+</div>
+</body>
+</html>
+

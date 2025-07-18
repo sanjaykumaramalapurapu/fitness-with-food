@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>chest</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Font Awesome for icons -->
+<style>
+     body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('https://s3.amazonaws.com/thisistoday-webassets/siteMedia/Devotion-Images/2019-10/workout.jpg'); /* Replace 'path/to/your/image.jpg' with your image file path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Ensures the background image stays fixed while scrolling */
+  backdrop-filter: blur(5px); /* Blur effect */
+}
+    .header {
+        background-color: #000; /* Changed header background color to black */
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+    .logo {
+        width: 40px; /* Adjust size as needed */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 10px; /* Space between logo and text */
+    }
+    .header-text {
+        font-size: 18px;
+        text-align: center;
+        flex-grow: 1; /* Center align text */
+    }
+    .corner-text {
+        font-size: 14px;
+        text-align: right;
+        white-space: nowrap; /* Prevent text from wrapping */
+        margin-left: 10px; /* Add space between texts */
+    }
+    .container {
+        display: ; /* Hide all containers by default */
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .form {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap if needed */
+}
+.form-group {
+    flex: 1; /* Equal width for form groups */
+    margin-right: 7px; /* Space between form groups */
+}
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+    form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    label {
+        font-weight: bold;
+    }
+    input[type="number"] {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #001c1c;
+        color: #fff;
+        cursor: pointer;
+    }
+    .rice-image {
+        display: block;
+        margin: 0 auto;
+        width: 200px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+    }
+    .btn-group {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px 0;
+    }
+    .btn {
+        flex: 1;
+        margin: 0 5px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #333;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+        background-color: #555;
+    }
+    .green-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.green-button:hover {
+    background-color: #45a049;
+}
+
+ </style>
+</head>
+<body>
+
+<div class="header">
+    <img src="https://www.rxbodybuilders.com/wp-content/uploads/body-building-supplements.jpg" alt="Logo" class="logo">
+    <img src="https://maxedmuscle.com/wp-content/uploads/2017/12/Strong-And-Handsome-Young-Body-89630354.jpg" alt="Logo" class="logo">
+    <div class="header-text">chest workouts </div>
+    <div class="corner-text">
+        <a href="{{url_for('index')}}" class="green-button">Go to Home</a>
+    </div>
+</div>
+<div class="container" id="chest">
+    <h1>Knee pushups-x6</h1>
+    <img src="https://www.vissco.com/wp-content/uploads/animation/sub/push-up-on-knees.gif" alt="Knee pushups" class="rice-image">
+</div>
+<div class="container" id="chest">
+    <h1>Inclined pushups-x6</h1>
+    <img src="https://www.verywellfit.com/thmb/GG7EXAUxQvwxiu4QAzDBPu6yy44=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/90-3120038--Incline-PushupsGIF-d321334ec54849539010832028d5635a.gif" alt="Inclined pushups" class="rice-image">
+</div>
+<div class="container" id="chest">
+    <h1>pushups-x4</h1>
+    <img src="https://nypost.com/wp-content/uploads/sites/2/2019/03/perfect-pushup.gif" alt="pushups" class="rice-image">
+</div>
+<div class="container" id="chest">
+    <h1>Wide Arm pushups-x4</h1>
+    <img src="https://boxingholic.com/wp-content/uploads/2020/12/wide-pushups.gif" alt="Wide Arm pushups" class="rice-image">
+</div>
+<div class="container" id="chest">
+    <h1>Indian pushups-x4</h1>
+    <img src="http://thebluefitness.weebly.com/uploads/2/1/2/0/21201362/6852150_orig.gif" alt="Indian pushups" class="rice-image">
+</div>
+<div class="container" id="chest">
+    <h1>Decline pushups-x4</h1>
+    <img src="https://www.verywellfit.com/thmb/P2oe9IY1ISHqVgH4dSAlybK-Kzc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/91-3120037--Decline-PushupsGIF-eb1210abbdb04bbf94a05aafb644b24f.gif" alt="Decline pushups" class="rice-image">
+</div>
+<div class="container" id="chest">
+    <h1>Triceps Dips-x6</h1>
+    <img src="https://cdn.prod.openfit.com/uploads/2020/03/30121923/chair-dip.gif" alt="Triceps Dips" class="rice-image">
+</div>
+<div class="container" id="chest">
+    <h1>Cobra stretch-30 sec</h1>
+    <img src="https://mybrain2spine.com/wp-content/uploads/2020/10/Cobra-Stretch-1024x683.jpg" alt="Cobra stretch" class="rice-image">
+</div>
+<div class="container" id="chest">
+    <h1>Rest-5min</h1>
+    <img src="https://betterme.world/articles/wp-content/uploads/2021/06/shutterstock_1145563982.jpg" alt="Rest" class="rice-image">
+</div>
+</body>
+</html>
+
+
+

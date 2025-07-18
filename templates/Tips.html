@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tips</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Font Awesome for icons -->
+<style>
+     body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('https://www.theconsciousplantkitchen.com/wp-content/uploads/2022/05/Breakfast-Fruit-Salad-1-rotated.jpg'); /* Replace 'path/to/your/image.jpg' with your image file path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Ensures the background image stays fixed while scrolling */
+  backdrop-filter: blur(5px); /* Blur effect */
+}
+    .header {
+        background-color: #000; /* Changed header background color to black */
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+    .logo {
+        width: 40px; /* Adjust size as needed */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 10px; /* Space between logo and text */
+    }
+    .header-text {
+        font-size: 18px;
+        text-align: center;
+        flex-grow: 1; /* Center align text */
+    }
+    .corner-text {
+        font-size: 14px;
+        text-align: right;
+        white-space: nowrap; /* Prevent text from wrapping */
+        margin-left: 10px; /* Add space between texts */
+    }
+    .container {
+        display: ; /* Hide all containers by default */
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .form {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap if needed */
+}
+.form-group {
+    flex: 1; /* Equal width for form groups */
+    margin-right: 7px; /* Space between form groups */
+}
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+    form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    label {
+        font-weight: bold;
+    }
+    input[type="number"] {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #001c1c;
+        color: #fff;
+        cursor: pointer;
+    }
+    .rice-image {
+        display: block;
+        margin: 0 auto;
+        width: 200px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+    }
+    .btn-group {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px 0;
+    }
+    .btn {
+        flex: 1;
+        margin: 0 5px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #333;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+        background-color: #555;
+    }
+    .green-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.green-button:hover {
+    background-color: #45a049;
+}
+ </style>
+</head>
+<body>
+<div class="header">
+    <img src="https://static.fanpage.it/wp-content/uploads/sites/22/2019/09/salad-1200x900.jpg" alt="Logo" class="logo">
+    <img src="https://therecipecritic.com/wp-content/uploads/2021/01/Chia-Pudding.png" alt="Logo" class="logo">
+    <div class="header-text">Healthy Tips</div>
+    <div class="corner-text">
+        <a href="{{url_for('index')}}" class="green-button">Go to Home</a>
+    </div>
+</div>
+<div class="container" id="Tips">
+    <h1>Eat Salads Instead of Breakfast</h1>
+    <img src="https://www.staysnatched.com/wp-content/uploads/2021/05/healthy-breakfast-salad-1-1-2048x1884.jpg" alt="salads" class="rice-image">
+    <p><h5> A bowl of freshly chopped vegetables topped with savory dressing sounds a perfect meal, Salads are a light meal and do not make you feel bloated. One medium-sized bowl of salad contains only 26 calories which you should consume without giving it a second thought.</h5>
+     <h4>"Amazing Benefits of Eating Salads,Boosts Metabolic Rate,Improves Cardiovascular Health,A Source of Antioxidants,Maintains Eye Health,Improves Digestion,Ideal for Obese Individuals,Provides Good FatsControl Sugars Levels"
+    </h4></p>
+</div>
+<div class="container" id="Tips">
+    <h1>Chia pudding</h1>
+    <img src="http://www.the350degreeoven.com/wp-content/uploads/2015/05/DSC_0556-1.jpg" alt="chiapudding" class="rice-image">
+    <p><h5> Add milk to your chia seeds, give it a good stir, and let time do the rest. In just a couple of hours, your seeds will be transformed into creamy, smooth pudding,topping with fresh fruit—juicy berries, sweet bananas, or any fruit you want or add dry fruits,Add Honey if reqired.</h5>
+     <h4>"Amazing Benefits of Eating chia pudding,Highly nutritious,Loaded with antioxidants,support weight loss,lower your risk of heart disease,reduce blood sugar levels,Contain many important bone nutrients,Easy to incorporate into your diet"
+    </h4></p>
+</div>
+<div class="container" id="Tips">
+    <h1>Do's and Don'ts</h1>
+    <img src="https://2.bp.blogspot.com/-MVn_i28vqZI/Vrls3bZ82yI/AAAAAAAAAHc/E0N5Gd5kooA/s1600/healthy-living-tips.jpg" alt="dos" class="rice-image">
+    <p><h1>Natural Health and Nutrition Tips</h1></p>
+    <p><h2>1. Limit sugary drinks</h2>
+    <h5><p>Sugary drinks like sodas, fruit juices, and sweetened teas are the primary source of added sugar,sugar-sweetened beverages increasing risk of heart disease and type 2 diabetes</p>
+    <p><h2>Healthier alternatives include:</h2></p>
+        <p>1.water</p>
+        <p>2.unsweetened teas</p>
+        <p>3.sparkling water</p>
+        <p>4.coffee</p>
+    </h5></p>
+    <p><h2>2.Eat nuts and seeds</h2></p>
+    <h5><p>Some people avoid nuts because they are high in fat. However, nuts and seeds are incredibly nutritious. They are packed with protein, fiber, and a variety of vitamins and minerals Nuts may help you lose weight and reduce the risk of developing type 2 diabetes and heart disease</h5></p>
+    <p><h2>3. Avoid ultra-processed foods</h2>
+    <p>1.snack cakes</p>
+    <p>2.fast food</p>
+    <p>3.frozen meals</p>
+    <p>4.packaged cookies</p>
+    <p>5.chips</p>
+    <p><h2>4.Eat fatty fish</h2></p>
+    <h5><p>Fish is a great source of high-quality protein and healthy fat. This is particularly true of fatty fish, such as salmon, which is loaded with anti-inflammatory omega-3 fatty acids and various other nutrients</h5></p>
+    <p><h2>5.Eat plenty of fruits and vegetables</h2></p>
+    <p><h2>6.Eat Enought protein</h2></p>
+    <p><h2>7.Stay hydrated(min 4litres per day)</h2></p>
+    <p><h2>8.Get enough sleep(6-8hrs per day)</h2></p>
+</div>
+</body>
+</html>
+
+

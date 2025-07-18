@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lunch</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Font Awesome for icons -->
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('https://www.lacademie.com/wp-content/uploads/2022/03/indian-lunch-recipes.jpg'); /* Replace 'path/to/your/image.jpg' with your image file path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Ensures the background image stays fixed while scrolling */
+  backdrop-filter: blur(5px); /* Blur effect */
+}
+    .header {
+        background-color: #000; /* Changed header background color to black */
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+    .logo {
+        width: 40px; /* Adjust size as needed */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 10px; /* Space between logo and text */
+    }
+    .header-text {
+        font-size: 18px;
+        text-align: center;
+        flex-grow: 1; /* Center align text */
+    }
+    .corner-text {
+        font-size: 14px;
+        text-align: right;
+        white-space: nowrap; /* Prevent text from wrapping */
+        margin-left: 10px; /* Add space between texts */
+    }
+    .container {
+        display: ; /* Hide all containers by default */
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: #f39c12;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .form {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap if needed */
+}
+.form-group {
+    flex: 1; /* Equal width for form groups */
+    margin-right: 7px; /* Space between form groups */
+}
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+    form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    label {
+        font-weight: bold;
+    }
+    input[type="number"] {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #001c1c;
+        color: #fff;
+        cursor: pointer;
+    }
+    .rice-image {
+        display: block;
+        margin: 0 auto;
+        width: 200px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+    }
+    .btn-group {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px 0;
+    }
+    .btn {
+        flex: 1;
+        margin: 0 5px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #333;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+        background-color: #555;
+    }
+    .green-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.green-button:hover {
+    background-color: #45a049;
+}
+ </style>
+</head>
+<body>
+
+<div class="header">
+    <img src="https://www.womensalphabet.com/wp-content/uploads/2020/04/balanced-diet.jpg" alt="Logo" class="logo">
+    <img src="https://www.drweil.com/wp-content/uploads/2019/02/Raw-Foods-Diet-2-470909250.jpg" alt="Logo" class="logo">
+    <div class="header-text">🍴Lunch🍽️</div>
+    <div class="corner-text">
+        <a href="{{url_for('index')}}" class="green-button">Go to Home</a>
+        <a href="{{url_for('diet_calculators')}}" class="green-button">Go to Diet Calculator</a>
+    </div>
+</div>
+<div class="container" id="lunch">
+     <h1>Rice</h1>
+    <img src="http://media2.onsugar.com/files/2014/03/25/070/n/1922195/62a96c30e6ba6fd2_shutterstock_43165990.jpg.xxxlarge_2x.jpg" alt="rice" class="rice-image">
+    <form action="{{ url_for('lunch') }}" method="post" class="form">
+        <div class="form-group">
+            <label for="rice_grams">Rice grams:</label>
+            <input type="number" id="rice_grams" name="rice_grams" value="{{ rice_grams }}">
+        </div>
+        <div>
+            <label for="caloriesConsumed_rice">Number of Calories:</label>
+            <input type="number" id="caloriesConsumed_rice" name="caloriesConsumed_rice" value="{{ caloriesConsumed_rice }}" readonly>
+        </div>
+        <input type="submit" value="Calculate Calories">
+    </form>
+    <h1>chicken biriyani</h1>
+    <img src="https://www.mistay.in/travel-blog/content/images/2020/07/hyderbadi-biriyani-1.jpg" alt="chicken biriyani" class="rice-image">
+    <form action="{{ url_for('lunch') }}" method="post" class="form">
+        <div class="form-group">
+            <label for="Biriyani_Grams">Biriyani Grams:</label>
+            <input type="number" id="Biriyani_Grams" name="Biriyani_Grams" value="{{ Biriyani_Grams }}">
+        </div>
+        <div>
+            <label for="caloriesConsumed_biriyani">Number of Calories:</label>
+            <input type="number" id="caloriesConsumed_biriyani" name="caloriesConsumed_biriyani" value="{{ caloriesConsumed_biriyani }}" readonly>
+        </div>
+        <input type="submit" value="Calculate Calories">
+    </form>
+    <h1>Chapathi</h1>
+    <img src="https://i.ytimg.com/vi/-3VpN0Bv8C4/maxresdefault.jpg" alt="chapathi" class="rice-image">
+    <form action="{{ url_for('lunch') }}" method="post" class="form">
+        <div class="form-group">
+            <label for="chapathi">Number of Chapathies(40g):</label>
+            <input type="number" id="chapathi" name="chapathi" value="{{ chapathi }}">
+        </div>
+        <div>
+            <label for="caloriesConsumed_chapathi">Number of Calories:</label>
+            <input type="number" id="caloriesConsumed_chapathi" name="caloriesConsumed_chapathi" value="{{ caloriesConsumed_chapathi }}" readonly>
+        </div>
+        <input type="submit" value="Calculate Calories">
+    </form>
+    <h1>Dal</h1>
+    <img src="https://betterfood.co.uk/app/uploads/2019/02/dal.jpg" alt="Dal" class="rice-image">
+    <form action="{{ url_for('lunch') }}" method="post" class="form">
+        <div class="form-group">
+            <label for="Dal">Grams:</label>
+            <input type="number" id="Dal" name="Dal" value="{{ Dal }}">
+        </div>
+        <div class="form-group">
+            <label for="Dal_protien">Dal protien:</label>
+            <input type="number" id="Dal_protien" name="Dal_protien" value="{{ Dal_protien }}" readonly>
+        </div>
+        <div class="form-group">
+            <label for="caloriesConsumed_Dal">Number of Calories:</label>
+            <input type="number" id="caloriesConsumed_Dal" name="caloriesConsumed_Dal" value="{{ caloriesConsumed_Dal }}" readonly>
+        </div>
+        <input type="submit" value="Calculate Calories">
+    </form>
+    <h1>chicken </h1>
+    <img src="https://cuthills.com/wp-content/uploads/2022/03/How-to-Prepare-Chicken-Before-Cooking.png" alt="chicken" class="rice-image">
+    <form action="{{ url_for('lunch') }}" method="post" class="form">
+        <div class="form-group">
+            <label for="chicken_curry_Grams">chicken Grams:</label>
+            <input type="number" id="chicken_curry_Grams" name="chicken_curry_Grams" value="{{ chicken_curry_Grams }}">
+        </div>
+         <div class="form-group">
+            <label for="chicken_protien">chicken protien:</label>
+            <input type="number" id="chicken_protien" name="chicken_protien" value="{{ chicken_protien }}" readonly>
+        </div>
+        <div class="form-group">
+            <label for="caloriesConsumed_chicken">Number of Calories:</label>
+            <input type="number" id="caloriesConsumed_chicken" name="caloriesConsumed_chicken" value="{{ caloriesConsumed_chicken }}" readonly>
+        </div>
+        <input type="submit" value="Calculate Calories">
+    </form>
+    <h1>mutton curry</h1>
+    <img src="https://www.licious.in/blog/wp-content/uploads/2020/12/Mutton-Curry-750x750.jpg" alt="mutton curry" class="rice-image">
+    <form action="{{ url_for('lunch') }}" method="post" class="form">
+        <div class="form-group">
+            <label for="mutton_curry_Grams">mutton Grams:</label>
+            <input type="number" id="mutton_curry_Grams" name="mutton_curry_Grams" value="{{ mutton_curry_Grams }}">
+        </div>
+        <div class="form-group">
+            <label for="mutton_protien">protien:</label>
+            <input type="number" id="mutton_protien" name="mutton_protien" value="{{ mutton_protien }}" readonly>
+        </div>
+        <div class="form-group">
+            <label for="caloriesConsumed_mutton">Number of Calories:</label>
+            <input type="number" id="caloriesConsumed_mutton" name="caloriesConsumed_mutton" value="{{ caloriesConsumed_mutton }}" readonly>
+        </div>
+        <input type="submit" value="Calculate Calories">
+    </form>
+    <h1>sambar rice</h1>
+    <img src="https://i.ytimg.com/vi/DVpPO_grg4Y/maxresdefault.jpg" alt="sambar rice" class="rice-image">
+    <form action="{{ url_for('lunch') }}" method="post" class="form">
+        <div class="form-group">
+            <label for="sambar_rice_Grams">sambar rice Grams:</label>
+            <input type="number" id="sambar_rice_Grams" name="sambar_rice_Grams" value="{{ sambar_rice_Grams }}">
+        </div>
+        <div>
+            <label for="caloriesConsumed_sambar">Number of Calories:</label>
+            <input type="number" id="caloriesConsumed_sambar" name="caloriesConsumed_sambar" value="{{ caloriesConsumed_sambar }}" readonly>
+        </div>
+        <input type="submit" value="Calculate Calories">
+    </form>
+    <h1>Potato curry</h1>
+    <img src="http://myeagereats.com/wp-content/uploads/2020/09/wp-1600620514632.jpg" alt="Potato curry" class="rice-image">
+    <form action="{{ url_for('lunch') }}" method="post" class="form">
+        <div class="form-group">
+            <label for="Potato_curry_grams">Potato curry grams:</label>
+            <input type="number" id="Potato_curry_grams" name="Potato_curry_grams" value="{{ Potato_curry_grams }}">
+        </div>
+        <div>
+            <label for="caloriesConsumed_Potato">Number of Calories:</label>
+            <input type="number" id="caloriesConsumed_Potato" name="caloriesConsumed_Potato" value="{{ caloriesConsumed_Potato }}" readonly>
+        </div>
+        <input type="submit" value="Calculate Calories">
+    </form>
+    <h1>Paneer curry</h1>
+    <img src="https://www.funfoodfrolic.com/wp-content/uploads/2022/08/Paneer-Curry-Blog.jpg" alt="Paneer curry" class="rice-image">
+    <form action="{{ url_for('lunch') }}" method="post" class="form">
+        <div class="form-group">
+            <label for="Paneer_curry_grams">Paneer curry grams:</label>
+            <input type="number" id="Paneer_curry_grams" name="Paneer_curry_grams" value="{{ Paneer_curry_grams }}">
+        </div>
+        <div class="form-group">
+            <label for="protien_Paneer">protien_Paneer:</label>
+            <input type="number" id="protien_Paneer" name="protien_Paneer" value="{{ protien_Paneer }}" readonly>
+        </div>
+        <div class="form-group">
+            <label for="caloriesConsumed_Paneer">Number of Calories:</label>
+            <input type="number" id="caloriesConsumed_Paneer" name="caloriesConsumed_Paneer" value="{{ caloriesConsumed_Paneer }}" readonly>
+        </div>
+        <input type="submit" value="Calculate Calories">
+    </form>
+    <h1>Mushroom curry</h1>
+    <img src="https://www.thelastfoodblog.com/wp-content/uploads/2017/09/mushroom-curry-thumb.jpg" alt="mushroom curry" class="rice-image">
+    <form action="{{ url_for('lunch') }}" method="post" class="form">
+        <div class="form-group">
+            <label for="mushroom_curry_grams">mushroom curry grams:</label>
+            <input type="number" id=" mushroom_curry_grams" name="mushroom_curry_grams" value="{{ mushroom_curry_grams }}">
+        </div>
+        <div>
+            <label for="caloriesConsumed_mushroom">Number of Calories:</label>
+            <input type="number" id="caloriesConsumed_mushroom" name="caloriesConsumed_mushroom" value="{{ caloriesConsumed_mushroom }}" readonly>
+        </div>
+        <input type="submit" value="Calculate Calories">
+    </form>
+    <h1>Fish piece(40g)</h1>
+    <img src="https://www.priyom.in/wp-content/uploads/2022/05/recipe-3.png" alt="fish curry" class="rice-image">
+    <form action="{{ url_for('lunch') }}" method="post" class="form">
+        <div class="form-group">
+            <label for="fish_curry">Fish pieces:</label>
+            <input type="number" id="fish_curry" name="fish_curry" value="{{ fish_curry }}">
+        </div>
+        <div class="form-group">
+            <label for="fish_protien">protien fish:</label>
+            <input type="number" id="fish_protien" name="fish_protien" value="{{ fish_protien }}" readonly>
+        </div>
+        <div>
+            <label for="caloriesConsumed_fish">Number of Calories:</label>
+            <input type="number" id="caloriesConsumed_fish" name="caloriesConsumed_fish" value="{{ caloriesConsumed_fish }}" readonly>
+        </div>
+        <input type="submit" value="Calculate Calories">
+    </form>
+    <h1>prawns curry</h1>
+    <img src="https://www.whiskaffair.com/wp-content/uploads/2020/04/Kerala-Prawn-Curry-3.jpg" alt="prawns curry" class="rice-image">
+    <form action="{{ url_for('lunch') }}" method="post" class="form">
+        <div class="form-group">
+            <label for="prawns_curry_grams">prawns curry grams:</label>
+            <input type="number" id="prawns_curry_grams" name="prawns_curry_grams" value="{{ prawns_curry_grams }}">
+        </div>
+        <div>
+            <label for="caloriesConsumed_prawns">Number of Calories:</label>
+            <input type="number" id="caloriesConsumed_prawns" name="caloriesConsumed_prawns" value="{{ caloriesConsumed_prawns }}" readonly>
+        </div>
+        <input type="submit" value="Calculate Calories">
+    </form>
+    <h1>curd rice</h1>
+    <img src="https://www.funfoodfrolic.com/wp-content/uploads/2022/04/Curd-Rice-Blog.jpg" alt="curd rice" class="rice-image">
+    <form action="{{ url_for('lunch') }}" method="post" class="form">
+        <div class="form-group">
+            <label for="curd_rice_grams">curd rice grams:</label>
+            <input type="number" id="curd_rice_grams" name="curd_rice_grams" value="{{ curd_rice_grams }}">
+        </div>
+        <div>
+            <label for="caloriesConsumed_curd">Number of Calories:</label>
+            <input type="number" id="caloriesConsumed_curd" name="caloriesConsumed_curd" value="{{ caloriesConsumed_curd }}" readonly>
+        </div>
+        <input type="submit" value="Calculate Calories">
+    </form>
+</div>
+</body>
+</html>
+

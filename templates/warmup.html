@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>warmup</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Font Awesome for icons -->
+<style>
+     body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('https://www.brnfitness.com/wp-content/uploads/2018/03/5-Easy-Warmup-Moves-to-Boost-Your-Runs.jpg'); /* Replace 'path/to/your/image.jpg' with your image file path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Ensures the background image stays fixed while scrolling */
+  backdrop-filter: blur(5px); /* Blur effect */
+}
+    .header {
+        background-color: #000; /* Changed header background color to black */
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+    .logo {
+        width: 40px; /* Adjust size as needed */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 10px; /* Space between logo and text */
+    }
+    .header-text {
+        font-size: 18px;
+        text-align: center;
+        flex-grow: 1; /* Center align text */
+    }
+    .corner-text {
+        font-size: 14px;
+        text-align: right;
+        white-space: nowrap; /* Prevent text from wrapping */
+        margin-left: 10px; /* Add space between texts */
+    }
+    .container {
+        display: ; /* Hide all containers by default */
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .form {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap if needed */
+}
+.form-group {
+    flex: 1; /* Equal width for form groups */
+    margin-right: 7px; /* Space between form groups */
+}
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+    form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    label {
+        font-weight: bold;
+    }
+    input[type="number"] {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #001c1c;
+        color: #fff;
+        cursor: pointer;
+    }
+    .rice-image {
+        display: block;
+        margin: 0 auto;
+        width: 200px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+    }
+    .btn-group {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px 0;
+    }
+    .btn {
+        flex: 1;
+        margin: 0 5px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #333;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+        background-color: #555;
+    }
+    .green-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.green-button:hover {
+    background-color: #45a049;
+}
+ </style>
+</head>
+<body>
+
+<div class="header">
+    <img src="https://recxpress.com.au/wp-content/uploads/2019/05/WARM-UP-EXERCISES-YOU-CAN-DO-BEFORE-HITTING-YOUR-WORKOUT-1.jpg" alt="Logo" class="logo">
+    <img src="https://generationiron.com/wp-content/uploads/2017/10/Best-Warmup-Exercises-You-Should-Do-Before-A-Workout.jpg" alt="Logo" class="logo">
+    <div class="header-text">warm up </div>
+    <div class="corner-text">
+        <a href="{{url_for('index')}}" class="green-button">Go to Home</a>
+    </div>
+</div>
+<div class="container" id="warmup">
+    <h1>shoulder rolls-Both sides x10</h1>
+    <img src="https://artimg.gympik.com/articles/wp-content/uploads/2019/03/AnitaGIF-Backward.gif" alt="shoulder" class="rice-image">
+</div>
+<div class="container" id="warmup">
+    <h1>Arm swings x10</h1>
+    <img src="https://mindbodygreen-res.cloudinary.com/images/w_767,q_auto:eco,f_auto,fl_lossy/org/4xo15fd4vkrdwnkos/arm-swings.gif" alt="Arm" class="rice-image">
+</div>
+<div class="container" id="warmup">
+    <h1>Head circles x8 Both sides</h1>
+    <img src="https://cdn.shopify.com/s/files/1/1122/2726/files/3-_Neck_Circles.gif?10371004997794969446" alt="Head circle" class="rice-image">
+</div>
+<div class="container" id="warmup">
+    <h1>Arm circles Each side x15</h1>
+    <img src="https://www.nerdfitness.com/wp-content/uploads/2023/10/Arm-Circles.gif" alt="Arm circles" class="rice-image">
+</div>
+
+<div class="container" id="warmup">
+    <h1>Jumping jacks x10</h1>
+    <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/workouts/2016/03/jumpingjack-1457045563.gif" alt="Jumping jacks" class="rice-image">
+</div>
+<div class="container" id="warmup">
+    <h1>Leg raises x10 each Leg</h1>
+    <img src="https://cdn-prod.medicalnewstoday.com/content/images/articles/325/325029/hip-flexion-gif.gif" alt="Leg raises" class="rice-image">
+</div>
+<div class="container" id="warmup">
+    <h1>Lunges x10 each Leg</h1>
+    <img src="https://i0.wp.com/post.greatist.com/wp-content/uploads/sites/2/2019/05/PERFECT-SERIES_LUNGE-HORIZONTAL_GRAIN.gif?w=1155&h=812" alt="Lunges" class="rice-image">
+</div>
+<div class="container" id="warmup">
+    <h1>Lateral lunges x10 each Leg</h1>
+    <img src="https://blog.squatwolf.com/wp-content/uploads/2022/06/65.gif" alt="Lateral lunges" class="rice-image">
+</div>
+<div class="container" id="warmup">
+    <h1>squats x15</h1>
+    <img src="https://i.pinimg.com/originals/63/be/5f/63be5f70cad75c78074a6201a854030c.gif" alt="squats" class="rice-image">
+</div>
+</body>
+</html>
+
